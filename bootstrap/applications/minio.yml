@@ -11,7 +11,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: bootstrap/minio
-    repoURL: 'https://github.com/pipekit/argo-workflows-ci-example.git'
+    repoURL: 'https://github.com/ntqp97/argo-workflows-ci-example'
     targetRevision: HEAD
   project: default
   syncPolicy:

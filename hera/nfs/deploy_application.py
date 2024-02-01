@@ -20,7 +20,7 @@ spec:
   project: default
   source:
     path: bootstrap/final-application
-    repoURL: 'https://github.com/pipekit/argo-workflows-ci-example.git'
+    repoURL: 'https://github.com/ntqp97/argo-workflows-ci-example'
     targetRevision: HEAD
   syncPolicy:
     automated:
