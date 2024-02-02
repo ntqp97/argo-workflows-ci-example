@@ -6,8 +6,8 @@ metadata:
     workflows.argoproj.io/description: >-
       Clones a git repository and then performs a git checkout of a branch defined
       in the workflow workflow.parameters. Then merges in a defined target branch.
-    workflows.argoproj.io/maintainer: 'Pipekit Inc'
-    workflows.argoproj.io/maintainer_url: 'https://github.com/pipekit/argo-workflows-ci-example'
+    workflows.argoproj.io/maintainer: 'ntqp97'
+    workflows.argoproj.io/maintainer_url: 'https://github.com/ntqp97/argo-workflows-ci-example'
     workflows.argoproj.io/version: '>= 3.3.6'
 spec:
   entrypoint: main
@@ -29,13 +29,13 @@ spec:
 
           cd /workdir
           echo "Start Clone of source branch"
-          git clone https://github.com/pipekit/{{workflow.parameters.app_repo}}.git
+          git clone https://github.com/ntqp97/{{workflow.parameters.app_repo}}.git
           cd {{workflow.parameters.app_repo}}
 
           ## These lines are a hack just for the example.
           git config --global --add safe.directory /workdir/{{workflow.parameters.app_repo}}
-          git config --global user.email "sales@pipekit.io"
-          git config --global user.name "Tim Collins"
+          git config --global user.email "ntqp97@gmail.com"
+          git config --global user.name "Phuoc Nguyen"
 
           git checkout {{workflow.parameters.git_branch}}
 
