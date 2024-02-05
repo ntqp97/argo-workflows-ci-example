@@ -14,7 +14,7 @@ spec:
   - host: argo-workflow.local
     http:
       paths:
-      - path: /argo
+      - path: /argo(/|$)(.*)
         pathType: Prefix
         backend:
           service:
