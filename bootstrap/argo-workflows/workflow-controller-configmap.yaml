@@ -28,7 +28,7 @@ data:
       retryStrategy:
         retryPolicy: OnError
         limit: 3
-      serviceAccountName: argo
+      serviceAccountName: default
 
   artifactRepository: |
     archiveLogs: true
