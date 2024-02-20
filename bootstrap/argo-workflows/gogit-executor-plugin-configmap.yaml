@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    workflows.argoproj.io/configmap-type: ExecutorPlugin
+  name: gogit-executor-plugin
+  namespace: argo
+data:
+  sidecar.automountServiceAccountToken: "true"
+  sidecar.container: |
+    args:
+    - status
+    - --provider
+    - gitlab
+    - --target
+    - http://argo.argo-server.svc:2746                        # should be an external address
+    - --create-comment=true                                   # create a comment to show the status of Workflow
+    image: ghcr.io/linuxsuren/workflow-executor-gogit:master
+    command:
+    - workflow-executor-gogit
+    name: gogit-executor-plugin
+    ports:
+    - containerPort: 3001
+    resources:
+      limits:
+        cpu: 500m
+        memory: 128Mi
+      requests:
+        cpu: 250m
+        memory: 64Mi
+    securityContext:
+      allowPrivilegeEscalation: true
+      runAsNonRoot: true
+      runAsUser: 65534

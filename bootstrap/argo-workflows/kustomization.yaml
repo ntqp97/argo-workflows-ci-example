@@ -8,6 +8,7 @@ resources:
 - ingress.yaml
 - rolebinding.yaml
 - minio-secret.yaml
+- gogit-executor-plugin-configmap.yaml
 
 patches:
 - path: workflow-controller-configmap.yaml
