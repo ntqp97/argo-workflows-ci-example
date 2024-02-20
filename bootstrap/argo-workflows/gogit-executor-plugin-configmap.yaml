@@ -14,8 +14,8 @@ data:
     - --provider
     - gitlab
     - --target
-    - http://argo.argo-server.svc:2746                        # should be an external address
-    - --create-comment=true                                   # create a comment to show the status of Workflow
+    - https://argo-workflow.local:8443/argo
+    - --create-comment=true
     image: ghcr.io/linuxsuren/workflow-executor-gogit:master
     command:
     - workflow-executor-gogit
