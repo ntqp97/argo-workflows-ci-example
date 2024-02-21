@@ -7,7 +7,7 @@ metadata:
   name: gogit-executor-plugin
   namespace: argo
 data:
-  sidecar.automountServiceAccountToken: "false"
+  sidecar.automountServiceAccountToken: "true"
   sidecar.container: |
     args:
     - status
