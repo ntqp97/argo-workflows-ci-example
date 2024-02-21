@@ -5,9 +5,9 @@ metadata:
   labels:
     workflows.argoproj.io/configmap-type: ExecutorPlugin
   name: gogit-executor-plugin
-  namespace: argo-events
+  namespace: argo
 data:
-  sidecar.automountServiceAccountToken: "true"
+  sidecar.automountServiceAccountToken: "false"
   sidecar.container: |
     args:
     - status
