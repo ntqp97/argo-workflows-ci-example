@@ -15,6 +15,8 @@ data:
     - gitlab
     - --target
     - https://argo-workflow.local:8443/argo
+    - --token
+    - $GITLAB_ACCESS_TOKEN
     image: ghcr.io/linuxsuren/workflow-executor-gogit:master@sha256:123119c6cc1280482add1c11daeb381780cb858b719fca8359c5f5577302af6a
     command:
     - workflow-executor-gogit
