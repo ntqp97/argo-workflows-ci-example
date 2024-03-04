@@ -25,9 +25,9 @@ data:
         secondsAfterCompletion: 172800
       volumeClaimGC:
         strategy: OnWorkflowCompletion
-      retryStrategy:
-        retryPolicy: OnError
-        limit: 3
+      # retryStrategy:
+      #   retryPolicy: OnError
+      #   limit: 3
       serviceAccountName: default
 
   artifactRepository: |
