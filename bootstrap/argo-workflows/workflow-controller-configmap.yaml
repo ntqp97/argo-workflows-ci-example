@@ -47,7 +47,7 @@ data:
     s3:
       bucket: argo-seenow-v2
       endpoint: s3.vtvlive.vn
-      insecure: true
+      insecure: false
       accessKeySecret:
         name: s3-creds
         key: access-key
