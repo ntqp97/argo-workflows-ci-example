@@ -9,6 +9,8 @@ resources:
 - rolebinding.yaml
 - minio-secret.yaml
 - gogit-executor-plugin-configmap.yaml
+- argo-workflows-sso-secret.yaml
+- gogit-executor-plugin-sa.yaml
 
 patches:
 - path: workflow-controller-configmap.yaml

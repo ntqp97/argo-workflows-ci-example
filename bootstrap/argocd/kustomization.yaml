@@ -6,6 +6,8 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 - namespace.yml
 - ingress.yaml
+- argo-workflows-sso-secret.yaml
+- argocd-dex-server-deployment.yaml
 
 patches:
 - path: argo-cm.yml

@@ -42,3 +42,15 @@ data:
       secretKeySecret:
         name: minio-creds
         key: secretkey
+
+  sso: |
+    issuer: https://argocd.local:8443/api/dex
+    sessionExpiry: 240h
+    clientId:
+      name: argo-workflows-sso
+      key: client-id
+    clientSecret:
+      name: argo-workflows-sso
+      key: client-secret
+    redirectUrl: https://argo-workflow.local:8443/argo/oauth2/callback
+    insecureSkipVerify: true
