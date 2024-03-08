@@ -11,7 +11,7 @@ data:
   url: https://argocd.local:8443
   dex.config: |
     connectors:
-      - type: OIDC
+      - type: oidc
         id: oidc
         name: OIDC
         config:
