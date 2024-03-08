@@ -13,7 +13,7 @@ patches:
   target:
     kind: ConfigMap
     name: argocd-cm
-- path:
-  target: argocd-dex-server-deployment.yaml
+- path: argocd-dex-server-deployment.yaml
+  target: 
     kind: Deployment
     name: argocd-dex-server
