@@ -53,4 +53,4 @@ data:
       name: argo-workflows-sso
       key: client-secret
     redirectUrl: https://argo-workflow.local:8443/argo/oauth2/callback
-    insecureSkipVerify: true
+    # insecureSkipVerify: true
