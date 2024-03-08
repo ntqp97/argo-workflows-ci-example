@@ -18,7 +18,7 @@ data:
           issuer: https://argocd.local:8443/api/dex
           clientID: $argocd-oidc-secret:client-id
           clientSecret: $argocd-oidc-secret:client-secret
-        insecureEnableGroups: true
+          insecureEnableGroups: true
           scopes:
           - profile
           - email
