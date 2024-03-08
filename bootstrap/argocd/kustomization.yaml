@@ -7,10 +7,13 @@ resources:
 - namespace.yml
 - ingress.yaml
 - argo-workflows-sso-secret.yaml
-- argocd-dex-server-deployment.yaml
 
 patches:
 - path: argo-cm.yml
   target:
     kind: ConfigMap
     name: argocd-cm
+- path:
+  target: argocd-dex-server-deployment.yaml
+    kind: Deployment
+    name: argocd-dex-server
