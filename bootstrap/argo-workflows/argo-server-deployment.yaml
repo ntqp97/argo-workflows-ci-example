@@ -12,7 +12,7 @@ spec:
         name: argo-server
         env:
           - name: BASE_HREF
-            value: /argo/
+            value: /
           - name: FIRST_TIME_USER_MODAL
             value: "false"
           - name: FEEDBACK_MODAL
