@@ -8,7 +8,7 @@ spec:
       containers:
       - args:
         - server
-        - --auth-mode=sso
+        - --auth-mode=client
         name: argo-server
         env:
           - name: BASE_HREF
