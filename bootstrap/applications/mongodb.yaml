@@ -7,7 +7,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  sources:
+  source:
     path: bootstrap/mongodb-standalone
     repoURL: 'https://github.com/ntqp97/argo-workflows-ci-example'
     targetRevision: HEAD
