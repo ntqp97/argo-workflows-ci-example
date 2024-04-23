@@ -5,7 +5,7 @@ resources: []
 helmGlobals:
   chartHome: ../../charts
 helmCharts:
-  - name: mongodb-standalone
+  - name: mongodb-standalone-m1
     releaseName: mongodb-standalone
     namespace: mongodb-standalone
     valuesFile: ./values.yaml
