@@ -128,9 +128,11 @@ diagnosticMode:
 ##
 image:
   registry: docker.io
-  repository: zcube/bitnami-compat-mongodb # bitnami/mongodb
-  tag: 6.0.5 # 7.0.8-debian-12-r2
-  digest: 2733db3d24c9
+  repository: zcube/bitnami-compat-mongodb 
+  ## bitnami/mongodb
+  tag: 6.0.5 
+  ## 7.0.8-debian-12-r2
+  digest: ""
   ## Specify a imagePullPolicy
   ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
   ##
