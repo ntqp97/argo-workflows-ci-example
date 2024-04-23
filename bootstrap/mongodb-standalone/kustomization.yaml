@@ -8,4 +8,4 @@ helmCharts:
   - name: mongodb-standalone
     releaseName: mongodb-standalone
     namespace: mongodb-standalone
-    valuesFile: values.yaml
+    valuesFile: ../../charts/mongodb-standalone/values.yaml
