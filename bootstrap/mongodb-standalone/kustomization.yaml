@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources: []
+
+helmGlobals:
+  chartHome: ../../charts
+helmCharts:
+  - name: mongodb-standalone
+    releaseName: mongodb-standalone
+    namespace: mongodb-standalone
+    valuesFile: values.yaml
