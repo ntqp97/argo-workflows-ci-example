@@ -3,6 +3,7 @@ image:
   registry: ghcr.io
   repository: zcube/bitnami-compat/redis
   tag: 7.0.11-debian-11-r64
+architecture: standalone
 metrics:
   image:
     digest: ''
