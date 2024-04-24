@@ -1,0 +1,47 @@
+replicaCount: 1
+
+image:
+  repository: docker-vtvgiaitri.vtvlive.vn/cellutions/sms-otp
+  pullPolicy: IfNotPresent
+  tag: "d0b34a9d"
+
+imagePullSecrets:
+  - regcred
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 50m
+    memory: 1024Mi
+
+extraEnv:
+  - name: REDIS_URL
+    value: "redis-standalone-master.redis-standalone.svc.cluster.local"
+  - name: REDIS_USER
+    value: default
+  - name: REDIS_PASS
+    valueFrom:
+      secretKeyRef:
+        name: redis-standalone
+        key: redis-password
+  - name: MONGO_URL
+    value: "mongodb-standalone.mongodb-standalone.svc.cluster.local"
+  - name: MONGO_USER
+    value: root
+  - name: MONGO_PASS
+    valueFrom:
+      secretKeyRef:
+        name: mongodb-standalone
+        key: mongodb-root-password
+  - name: SMS_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: sms-vtvcab-creds
+        key: sms-password
+  - name: SMS_SHAREKEY
+    valueFrom:
+      secretKeyRef:
+        name: sms-vtvcab-creds
+        key: sms-sharekey
