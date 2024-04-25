@@ -74,20 +74,20 @@ autoscaling:
   targetCPUUtilizationPercentage: 70
 
 extraEnv:
-  - name: REDIS_URL
+  - name: REDIS_DB_HOST
     value: "redis-standalone-master.redis-standalone.svc.cluster.local"
   - name: REDIS_USER
     value: default
-  - name: REDIS_PASS
+  - name: REDIS_DB_PASSWORD
     valueFrom:
       secretKeyRef:
         name: redis-standalone
         key: redis-password
-  - name: MONGO_URL
+  - name: DB_HOST
     value: "mongodb-standalone.mongodb-standalone.svc.cluster.local"
-  - name: MONGO_USER
+  - name: DB_USERNAME
     value: root
-  - name: MONGO_PASS
+  - name: DB_PASSWORD
     valueFrom:
       secretKeyRef:
         name: mongodb-standalone
