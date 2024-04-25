@@ -5,7 +5,7 @@ resources: []
 helmGlobals:
   chartHome: ../../charts
 helmCharts:
-  - name: standart-nodejs-service
+  - name: standard-nodejs-service
     releaseName: sms-otp
     namespace: sn-dev-workload
     valuesFile: ./values.yaml
