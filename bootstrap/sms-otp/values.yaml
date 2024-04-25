@@ -6,7 +6,7 @@ image:
   tag: "d0b34a9d"
 
 imagePullSecrets:
-  - regcred
+  - name: regcred
 
 resources:
   limits:
