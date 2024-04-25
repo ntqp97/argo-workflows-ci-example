@@ -75,7 +75,7 @@ autoscaling:
 
 extraEnv:
   - name: REDIS_DB_HOST
-    value: "redis-standalone-master.redis-standalone.svc.cluster.local"
+    value: "redis-standalone-headless.redis-standalone.svc.cluster.local"
   - name: REDIS_USER
     value: default
   - name: REDIS_DB_PASSWORD
